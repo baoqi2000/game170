@@ -68,6 +68,38 @@
             cursor: pointer;
             margin-top: 20px;
         }
+        
+    .begin-button {
+        padding: 15px 30px;
+        font-size: 1.2em;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #333333;
+        border-radius: 15px;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .begin-button:hover {
+        background-color: #555555;
+        transform: scale(1.05);
+    }
+
+    .begin-button:active {
+        transform: scale(0.95);
+    }
+
+    a {
+        text-decoration: none; /* This will remove the underline */
+    }
+
+        .container {
+            max-width: 800px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 
@@ -80,8 +112,10 @@
         </p>
     </div>
 
-    <a class="continue-button" href="kittenE1.html">GO OUT!</a>
-    <a class="continue-button1" href="kittenE2.html">Catch the Mouse!</a>
+
+    <a href="kittenE1.html" class="begin-button">GO OUT!</a>
+    <a href="kittenE2.html" class="begin-button">Catch the Mouse!</a>
+    
 </body>
 
 </html>

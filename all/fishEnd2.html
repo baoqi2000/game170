@@ -54,6 +54,29 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
+        .begin-button {
+        padding: 15px 30px;
+        font-size: 1.2em;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #333333;
+        border-radius: 15px;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .begin-button:hover {
+        background-color: #555555;
+        transform: scale(1.05);
+    }
+
+    .begin-button:active {
+        transform: scale(0.95);
+    }
+
+    a {
+        text-decoration: none; /* This will remove the underline */
+    }
     </style>
 </head>
 
@@ -69,7 +92,8 @@
         </p>
     </div>
 
-    <a class="continue-button" href="choose.html">Wanna Play Again?</a>
+    
+    <a href="choose.html" class="begin-button">Wanna Play Again?</a>
 </body>
 
 </html>
