@@ -14,83 +14,60 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-image: url('asd.gid.gif'); /* Set the GIF as the background */
-            background-size: cover; /* Make sure the background covers the entire viewport */
-            background-repeat: no-repeat; /* Prevent the background from repeating */
-            background-attachment: fixed; /* Keep the background fixed while scrolling */
+            background-image: url('asd.gid.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             color: #83317b;
             text-align: center;
+            font-size: 1.1em; /* Increased base font size for overall increase in text size */
         }
 
         .container {
-            max-width: 800px;
-            padding: 30px;
+            max-width: 850px; /* Adjusted the width to fit the screen better */
+            padding: 35px;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
         }
 
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
+            font-size: 3em; /* Made title bigger */
+            margin-bottom: 30px;
         }
 
         p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-            line-height: 1.6;
+            font-size: 1.4em; /* Increased size */
+            margin-bottom: 40px; /* Added more margin at the bottom for better spacing */
+            line-height: 1.7;
         }
 
-        .continue-button {
-            position: center;
-            bottom: 20px;
-            right: 20px;
-            padding: 10px 20px;
-            font-size: 2em;
+        .begin-button, .begin-button1 {
+            padding: 18px 35px;
+            font-size: 1.5em; /* Increased size */
             text-decoration: none;
             color: #ffffff;
-            background-color: #c882e1;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .continue-button1 {
-            position: center;
-            bottom: 20px;
-            right: 20px;
-            padding: 10px 20px;
-            font-size: 2em;
-            text-decoration: none;
-            color: #ffffff;
-            background-color: #273ebf;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
+            border-radius: 20px;
+            transition: background-color 0.3s, transform 0.3s;
+            margin: 15px; /* Added margin for spacing */
         }
 
         .begin-button {
-        padding: 15px 30px;
-        font-size: 1.2em;
-        text-decoration: none;
-        color: #ffffff;
-        background-color: #333333;
-        border-radius: 15px;
-        transition: background-color 0.3s, transform 0.3s;
-    }
+            background-color: #E57C00; /* New color */
+        }
 
-    .begin-button:hover {
-        background-color: #555555;
-        transform: scale(1.05);
-    }
+        .begin-button1 {
+            background-color: #273ebf; /* Color based on your button class */
+        }
 
-    .begin-button:active {
-        transform: scale(0.95);
-    }
+        .begin-button:hover, .begin-button1:hover {
+            background-color: #555555;
+            transform: scale(1.05);
+        }
 
-    a {
-        text-decoration: none; /* This will remove the underline */
-    }
+        .begin-button:active, .begin-button1:active {
+            transform: scale(0.95);
+        }
     </style>
 </head>
 
@@ -101,10 +78,9 @@
            You are shocked: You have wings!
            What will you do at that moment?
         </p>
+        <a href="doveEnd1.html" class="begin-button">Fly in the Sky~</a>
+        <a href="doveEnd2.html" class="begin-button1">You are scared and try to wake up</a>
     </div>
-
-    <a href="doveEnd1.html" class="begin-button">Fly in the Sky~</a>
-    <a href="doveEnd2.html" class="begin-button">CYou are scared and try to wake up</a>
 </body>
 
 </html>

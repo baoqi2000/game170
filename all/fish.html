@@ -18,65 +18,63 @@
             animation: colorChange 10s infinite alternate;
             text-align: center;
             color: #333333;
+            font-size: 1.1em; /* Increased font size */
         }
 
         h1 {
-            font-size: 2.5em;
+            font-size: 3em;
             margin-bottom: 20px;
         }
 
         .container {
-            max-width: 800px;
-            padding: 30px;
+            max-width: 900px;
+            padding: 40px;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
         }
 
         .animal-ability {
-            font-size: 1.2em;
+            font-size: 1.4em;
             margin-bottom: 30px;
-            line-height: 1.6;
+            line-height: 1.8;
             display: none;
         }
 
-        .continue-button {
-            background-color: #31e1de; /* Green */
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
+        .continue-button, .ability-button, .begin-button {
+            padding: 15px 35px;
+            font-size: 1.2em;
             text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            transition-duration: 0.4s;
-            cursor: pointer;
+            color: #ffffff;
             border-radius: 10px;
-            margin-top: 100px;
+            margin: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
-        .continue-button:hover {
-            background-color: white;
-            color: black;
-            border: 2px solid #4CAF50;
+        .continue-button:hover, .ability-button:hover, .begin-button:hover {
+            background-color: #555555;
+            transform: scale(1.05);
+        }
+
+        .continue-button:active, .ability-button:active, .begin-button:active {
+            transform: scale(0.95);
         }
 
         .ability-button {
-            padding: 10px 20px;
-            font-size: 1em;
-            text-decoration: none;
-            color: #ffffff;
-            background-color: #333333;
-            border-radius: 5px;
-            margin: 5px;
-            cursor: pointer;
+            background-color: #e57373; /* Red color for ability-button */
+            margin-bottom: 20px;
+        }
+
+        .begin-button {
+            background-color: #81c784; /* Green color for begin-button */
         }
 
         img {
             max-width: 100%;
             border-radius: 10px;
+            margin-top: 20px;
         }
 
         @keyframes colorChange {
@@ -88,37 +86,18 @@
             }
         }
 
-        .begin-button {
-        padding: 15px 30px;
-        font-size: 1.2em;
-        text-decoration: none;
-        color: #ffffff;
-        background-color: #333333;
-        border-radius: 15px;
-        transition: background-color 0.3s, transform 0.3s;
-    }
-
-    .begin-button:hover {
-        background-color: #555555;
-        transform: scale(1.05);
-    }
-
-    .begin-button:active {
-        transform: scale(0.95);
-    }
-
-    a {
-        text-decoration: none; /* This will remove the underline */
-    }
+        a {
+            text-decoration: none; /* This will remove the underline */
+        }
     </style>
 </head>
 
 <body>
-    <h1>Click the Button to explore your skills!</h1>
+    <h1>Click the Button to Explore Your Skills!</h1>
 
     <div class="container">
         <div class="animal-ability" id="goldfish-ability">
-            Swimming Ability: Congratulations! You are able to breath in the ocean
+            Swimming Ability: Congratulations! You are able to breathe in the ocean.
         </div>
         <div class="animal-ability" id="kitten-ability">
             The kitten is agile, cute, and can communicate with other cats in their secret language!
@@ -130,8 +109,10 @@
         <button class="ability-button" onclick="showAbility('goldfish-ability')">Reveal Ability</button>
     </div>
 
-    <img src="fish.jpg" alt="Your Image" height = 100px;  >
-  
+    <img src="fish.jpg" alt="Your Image" height="150px">
+
+    <a href="2.html" class="begin-button">Continue</a>
+
     <script>
         function showAbility(id) {
             var abilities = document.getElementsByClassName('animal-ability');
@@ -142,9 +123,7 @@
             ability.style.display = 'block';
         }
     </script>
- <a href="2.html" class="begin-button">Continue</a>
-   
-    
+
 </body>
 
 </html>

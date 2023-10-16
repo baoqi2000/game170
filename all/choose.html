@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,17 +14,18 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-image: url('back.gif'); /* Set the GIF as the background */
-            background-size: cover; /* Make sure the background covers the entire viewport */
-            background-repeat: no-repeat; /* Prevent the background from repeating */
-            background-attachment: fixed; /* Keep the background fixed while scrolling */
+            background-image: url('back.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             color: #83317b;
             text-align: center;
+            font-size: 24px; /* Increased base font size */
         }
 
         .container {
-            max-width: 800px;
-            padding: 30px;
+            max-width: 90%; /* Wider container */
+            padding: 40px;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -34,28 +33,52 @@
         }
 
         h1 {
-            font-size: 2.5em;
+            font-size: 3em; /* Increased font size */
             margin-bottom: 20px;
         }
 
         p {
-            font-size: 1.2em;
+            font-size: 1.5em; /* Increased font size */
             margin-bottom: 30px;
-            line-height: 1.6;
+            line-height: 1.8;
         }
 
-        .continue-button {
-            position: center;
-            bottom: 20px;
-            right: 20px;
-            padding: 10px 20px;
-            font-size: 2em;
+        .begin-button {
+            padding: 20px 40px; /* Larger buttons */
+            font-size: 1.5em; /* Increased font size */
             text-decoration: none;
             color: #ffffff;
-            background-color: #c882e1;
-            border-radius: 5px;
-            cursor: pointer;
+            margin: 10px;
+            border-radius: 15px;
+            transition: background-color 0.3s, transform 0.3s;
         }
+
+        .begin-button:hover {
+            transform: scale(1.05);
+        }
+
+        .begin-button:active {
+            transform: scale(0.95);
+        }
+
+        #goldfish-btn {
+            background-color: #e4a669;
+        }
+
+        #kitten-btn {
+            background-color: #c783d0;
+        }
+
+        #dove-btn {
+            background-color: #83c2e8;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
     </style>
 </head>
 
@@ -63,102 +86,35 @@
     <div class="container">
         <h1>Night is coming</h1>
         <p>
-            After a few seconds, you wake up and open the eyes
-           However, you notice you are not in your room, instead, you are......
+            After a few seconds, you wake up and open the eyes. However, you notice you are not in your room, instead, you are......
         </p>
+        <div class="buttons">
+            <a href="fish.html" class="begin-button" id="goldfish-btn">Goldfish</a>
+            <a href="kitten.html" class="begin-button" id="kitten-btn">Kitten</a>
+            <a href="dove.html" class="begin-button" id="dove-btn">Dove</a>
+        </div>
     </div>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Animal Selection</title>
-        <style>
-            body {
-                margin: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                transition: background 1s ease;
-            }
-    
-            .container {
-                text-align: center;
-            }
-    
-            button {
-                font-size: 1.5em;
-                padding: 10px 20px;
-                margin: 10px;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-    
-            #goldfish-btn {
-                background-color: #e4c569;
-            }
-    
-            #kitten-btn {
-                background-color: #c7b3d0;
-            }
-    
-            #dove-btn {
-                background-color: #c0d3e8;
-            }
-            
-            .begin-button {
-        padding: 15px 30px;
-        font-size: 1.2em;
-        text-decoration: none;
-        color: #ffffff;
-        background-color: #333333;
-        border-radius: 15px;
-        transition: background-color 0.3s, transform 0.3s;
-    }
+    <script>
+        function goToPage(page) {
+            window.location.href = page;
+        }
 
-    .begin-button:hover {
-        background-color: #555555;
-        transform: scale(1.05);
-    }
+        var colors = [
+            'linear-gradient(to bottom, #ffcc99, #ff6666)',
+            'linear-gradient(to bottom, #a1c4fd, #c2e9fb)',
+            'linear-gradient(to bottom, #8e2de2, #4a00e0)',
+            'linear-gradient(to bottom, #4776e6, #8e54e9)',
+            'linear-gradient(to bottom, #ff6e7f, #bfe9ff)',
+            'linear-gradient(to bottom, #f12711, #f5af19)'
+        ];
 
-    .begin-button:active {
-        transform: scale(0.95);
-    }
-
-    a {
-        text-decoration: none; /* This will remove the underline */
-    }
-        </style>
-    </head>
-    
-   
-        <a href="fish.html" class="begin-button">Goldfish</a>
-        <a href="kitten.html" class="begin-button">Kitten</a>
-        <a href="dove.html" class="begin-button">Dove</a>
-       
-    
-        <script>
-            function goToPage(page) {
-                window.location.href = page;
-            }
-    
-            var colors = [
-                'linear-gradient(to bottom, #ffcc99, #ff6666)',
-                'linear-gradient(to bottom, #a1c4fd, #c2e9fb)',
-                'linear-gradient(to bottom, #8e2de2, #4a00e0)',
-                'linear-gradient(to bottom, #4776e6, #8e54e9)',
-                'linear-gradient(to bottom, #ff6e7f, #bfe9ff)',
-                'linear-gradient(to bottom, #f12711, #f5af19)'
-            ];
-    
-            var index = 0;
-            setInterval(function() {
-                document.body.style.background = colors[index];
-                index = (index + 1) % colors.length;
-            }, 5000); // Change every 5 seconds
-        </script>
-    </body>
+        var index = 0;
+        setInterval(function() {
+            document.body.style.background = colors[index];
+            index = (index + 1) % colors.length;
+        }, 5000); // Change every 5 seconds
+    </script>
 </body>
 
 </html>

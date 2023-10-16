@@ -8,43 +8,42 @@
     <style>
         html, body {
             height: 100%;
+            margin: 0;
+            padding: 0;
+            font-size: 24px; /* Increase base font size */
         }
 
         body {
-            background: linear-gradient(to bottom, #ffcc99, #ff6666); /* Changed gradient colors */
+            background: linear-gradient(to bottom, #ffcc99, #ff6666);
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             font-family: Arial, sans-serif;
-            color: #333333; /* Text color */
+            color: #333333;
         }
 
         .container {
             padding: 50px;
-            max-width: 600px; /* Set a maximum width for the content */
-            margin-bottom: 200px;
+            width: 100%; /* Adjusted to take up full width */
         }
 
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
+            font-size: 3em; /* Adjusted font sizes for larger text */
         }
 
         p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
+            font-size: 2em;
             line-height: 1.6;
         }
 
         .author {
-            font-size: 1em;
-            margin-bottom: 10px;
+            font-size: 1.5em; 
         }
 
         .back-button {
-            padding: 10px 20px;
-            font-size: 1em;
+            padding: 15px 30px;
+            font-size: 1.5em;
             text-decoration: none;
             color: #ffffff;
             background-color: #333333;
@@ -52,27 +51,19 @@
         }
 
         .begin-button {
-        padding: 15px 30px;
-        font-size: 1.2em;
-        text-decoration: none;
-        color: #ffffff;
-        background-color: #333333;
-        border-radius: 15px;
-        transition: background-color 0.3s, transform 0.3s;
-    }
+            padding: 15px 30px;
+            font-size: 2em;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #333333;
+            border-radius: 15px;
+            transition: background-color 1s; /* Adjusted transition for color change */
+        }
 
-    .begin-button:hover {
-        background-color: #555555;
-        transform: scale(1.05);
-    }
+        a {
+            text-decoration: none; 
+        }
 
-    .begin-button:active {
-        transform: scale(0.95);
-    }
-
-    a {
-        text-decoration: none; /* This will remove the underline */
-    }
     </style>
 </head>
 
@@ -80,13 +71,22 @@
     <div class="container">
         <h1>Introduction</h1>
         <p>
-            Welcome to the dreaming world！ In this "world", you have opportunities to change your indentities and become a kind of animal. 
+            Welcome to the dreaming world！ In this "world", you have three opportunities to change your life and become a kind of animal! 
             Excited? Worried? Scared? 
             Can't wait to start! If you are ready, press the button and begin your transfiguration travel~
         </p>
+        <a href="1.html" class="begin-button" id="readyButton">I'm Ready! Come On!</a> <!-- Moved the button inside the container -->
     </div>
-    <a href="1.html" class="begin-button">I'm Ready! Come On!</a>
+
     <script>
+        const colors = ['#FF5733', '#33FF57', '#5733FF'];
+        let colorIndex = 0;
+
+        document.getElementById('readyButton').addEventListener('mouseover', function() {
+            this.style.backgroundColor = colors[colorIndex % colors.length];
+            colorIndex++;
+        });
+
         function startTransfiguration() {
             window.location.href = "choose.html";
         }
@@ -94,4 +94,3 @@
 </body>
 
 </html>
-

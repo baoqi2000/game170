@@ -18,37 +18,38 @@
             animation: colorChange 10s infinite alternate;
             text-align: center;
             color: #333333;
+            font-size: 1.1em; /* Increase base font size */
         }
 
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
+            font-size: 3em; /* Made title bigger */
+            margin-bottom: 30px;
         }
 
         .container {
-            max-width: 800px;
-            padding: 30px;
+            max-width: 850px; /* Adjusted the width to fit the screen better */
+            padding: 35px;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
             margin-bottom: 20px;
         }
 
         .animal-ability {
-            font-size: 1.2em;
+            font-size: 1.4em; /* Increased size */
             margin-bottom: 30px;
-            line-height: 1.6;
+            line-height: 1.7;
             display: none;
         }
 
         .ability-button {
-            padding: 10px 20px;
-            font-size: 1em;
+            padding: 12px 25px;
+            font-size: 1.2em; /* Increased size */
             text-decoration: none;
             color: #ffffff;
-            background-color: #333333;
-            border-radius: 5px;
-            margin: 5px;
+            background-color: #0077CC; /* Changed color */
+            border-radius: 7px;
+            margin: 15px 0; /* Adjusted margin */
             cursor: pointer;
         }
 
@@ -57,50 +58,25 @@
             border-radius: 10px;
         }
 
-        .continue-button {
-            background-color: #31e1de; /* Green */
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            transition-duration: 0.4s;
-            cursor: pointer;
-            border-radius: 10px;
-            margin-top: 100px;
-        }
-
-        .continue-button:hover {
-            background-color: white;
-            color: black;
-            border: 2px solid #4CAF50;
-        }
-
         .begin-button {
-        padding: 15px 30px;
-        font-size: 1.2em;
-        text-decoration: none;
-        color: #ffffff;
-        background-color: #333333;
-        border-radius: 15px;
-        transition: background-color 0.3s, transform 0.3s;
-    }
+            padding: 18px 35px;
+            font-size: 1.5em; /* Increased size */
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #E57C00; /* Changed color */
+            border-radius: 20px;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-top: 25px;
+        }
 
-    .begin-button:hover {
-        background-color: #555555;
-        transform: scale(1.05);
-    }
+        .begin-button:hover {
+            background-color: #FF8C30; /* Slightly brighter shade for hover */
+            transform: scale(1.05);
+        }
 
-    .begin-button:active {
-        transform: scale(0.95);
-    }
-
-    a {
-        text-decoration: none; /* This will remove the underline */
-    }
+        .begin-button:active {
+            transform: scale(0.95);
+        }
 
         @keyframes colorChange {
             0% {
@@ -130,8 +106,8 @@
         <button class="ability-button" onclick="showAbility('goldfish-ability')">Reveal Ability</button>
     </div>
 
-    <img src="dove.jpg" height = 250px; width = 200px;>
-  
+    <img src="dove.jpg" height="250px" width="200px">
+
     <script>
         function showAbility(id) {
             var abilities = document.getElementsByClassName('animal-ability');
@@ -143,8 +119,7 @@
         }
     </script>
 
-<a href="doveB.html" class="begin-button">Continue</a>
-
+    <a href="doveB.html" class="begin-button">Continue</a>
 
 </body>
 

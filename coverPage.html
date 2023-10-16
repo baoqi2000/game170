@@ -6,9 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DREAM COME TRUE?</title>
     <style>
+        @keyframes colorChange {
+            0% { color: red; }
+            25% { color: blue; }
+            50% { color: green; }
+            75% { color: yellow; }
+            100% { color: red; }
+        }
+
         html, body {
             height: 100%;
             margin: 0;
+            font-size: 24px; /* base font-size for responsiveness */
         }
 
         body {
@@ -21,7 +30,7 @@
         }
 
         .container {
-            padding: 100px;
+            padding: 5vw;
             background-size: cover;
             display: flex;
             flex-direction: column;
@@ -30,27 +39,29 @@
         }
 
         h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
+            font-size: 4em;
+            margin-bottom: 2vw;
+            animation: colorChange 5s infinite;
         }
 
         .author {
-            font-size: 1.5em;
-            margin-bottom: 31px;
+            font-size: 2em;
+            margin-bottom: 2vw;
         }
 
         .begin-button {
-            padding: 15px 30px;
-            font-size: 1.2em;
+            padding: 1.5vw 3vw;
+            font-size: 1.5em;
             text-decoration: none;
             color: #ffffff;
-            background-color: #333333;
+            background-color: purple; /* changed color */
             border-radius: 15px;
+            font-family: "Courier New", Courier, monospace; /* changed font */
             transition: background-color 0.3s, transform 0.3s;
         }
 
         .begin-button:hover {
-            background-color: #555555;
+            background-color: #8844ff; /* changed hover color */
             transform: scale(1.05);
         }
 
@@ -58,8 +69,14 @@
             transform: scale(0.95);
         }
 
+        button {
+            margin-top: 2vw;
+            padding: 1vw 2vw;
+            font-size: 1.2em;
+        }
+
         a {
-            text-decoration: none; /* This will remove the underline */
+            text-decoration: none;
         }
     </style>
 </head>
@@ -69,12 +86,12 @@
         <h1>DREAM COMES TRUE</h1>
         <div class="author">Author: Baoqi Yu</div>
         <a href="all/Introduction.html" class="begin-button">Let's begin</a>
+        <button onclick="toggleAudio()">Play Music</button>
     </div>
 
     <audio id="myAudio" loop>
         <source src="haha.mp3" type="audio/mpeg">
     </audio>
-    <button onclick="toggleAudio()">Play Music</button>
     
     <script>
         function toggleAudio() {
